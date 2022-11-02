@@ -5,7 +5,7 @@
 .chat_screen { 
   height:calc(100% - 140px);
   overflow:auto;
-  background-color:#B2C7DA;
+  background: url(../img/pack.jpg)no-repeat center center /100%;
   .chat_screen_bar {
     position:sticky;
     top:0;
@@ -18,7 +18,7 @@
 }
 
 .chat_user { 
-  background-color:#B2C7DA;
+  background:rgba(255,255,255,.6)
 }
 
 .bubble_container {

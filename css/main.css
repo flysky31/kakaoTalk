@@ -19,10 +19,16 @@ html {
 body {
   height: 100%;
   min-width: 350px;
+  max-width: 768px;
+  margin: 0 auto;
 }
 
 a {
   text-decoration: none;
+}
+
+li {
+  list-style: none;
 }
 
 .nav {
@@ -263,7 +269,7 @@ a.preview_wrap .preview:hover {
 .chat_screen {
   height: calc(100% - 140px);
   overflow: auto;
-  background-color: #B2C7DA;
+  background: url(../img/pack.jpg) no-repeat center center/100%;
 }
 .chat_screen .chat_screen_bar {
   position: sticky;
@@ -275,7 +281,7 @@ a.preview_wrap .preview:hover {
 }
 
 .chat_user {
-  background-color: #B2C7DA;
+  background: rgba(255, 255, 255, 0.6);
 }
 
 .bubble_container {

@@ -3,7 +3,6 @@
   padding:16px;
   position: relative;
 
-  .preview_column{
     .preview_pic {
       @include set-box(50px, 50px, 16px);
       background-color:$main-color;
@@ -34,27 +33,53 @@
       position:absolute;
       top:10px; right:16px;
       font-size:0.7em;
-      color:$gray2
+      color:$gray2;
     }
-  }  
-}
-
-.bubble {
-  @include set-box(auto, 100%, 4px);
-
-  position: relative;
-  background-color: #fff;
-  box-shadow:2px 2px 3px $opacityBlack;
-  padding:10px;
-  font-size:0.9em;
-
-  &::before {
-    @include set-box(0, 0);
+    .bubble {
+      @include set-box(auto, auto, 4px);
     
-    content:""; 
-    position:absolute;
-    top:10px; left:-10px;
-    border-bottom:10px solid transparent;
-    border-right:10px solid #fff;
+      position: relative;
+      background-color: #fff;
+      box-shadow:2px 2px 3px $opacityBlack;
+      padding:10px;
+      font-size:0.9em;
+    
+      &::before {
+        @include set-box(0, 0);
+        
+        content:""; 
+        position:absolute;
+        top:10px; left:-10px;
+        border-bottom:10px solid transparent;
+        border-right:10px solid #fff;
+      }
+    }
+    
+  &.my {
+    flex-direction:row-reverse;
+
+    .bubble_wrap{
+      flex-direction:row-reverse;
+    }
+    .preview_pic{
+      display: none;
+    }
+    .preview_nick{
+      display: none;
+    }
+    .bubble {
+      background-color:$bg-color;
+
+      &::before {
+        left: auto;
+        right: -10px;  
+        border-top:10px solid $bg-color;
+        border-right:10px solid transparent;
+      }
+    }
   }
 }
+
+
+
+
